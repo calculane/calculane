@@ -20,7 +20,8 @@ export class CourseService {
 
   getCoursesWithHeaders(): Observable<Course[]> {
     let headers = new HttpHeaders({
-    'Access-Control-Allow-Origin': 'null',
+      'Origin': 'https://calculane.vercel.app',
+    'Access-Control-Allow-Origin': 'https://calculane.vercel.app',
     'Accept': 'application/json, text/plain, */*',
     'Authorization': 'Basic ' + btoa(this._clientId + ':' + this._clientSecret),
     'Content-Type': 'application/json;charset=utf-8'
